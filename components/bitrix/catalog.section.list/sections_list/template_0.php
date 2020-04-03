@@ -37,29 +37,12 @@
 							</ul>
 						</td>
 					</tr>
-					
-						<style type="text/css">
-							.desc_opened{
-								display: none;
-							}
-						</style>
-
 					<?if($arParams["SECTIONS_LIST_PREVIEW_DESCRIPTION"]!="N"):?>
 						<?$arSection = $section=CNextCache::CIBlockSection_GetList(array('CACHE' => array("MULTI" =>"N", "TAG" => CNextCache::GetIBlockCacheTag($arParams["IBLOCK_ID"]))), array('GLOBAL_ACTIVE' => 'Y', "ID" => $arItems["ID"], "IBLOCK_ID" => $arParams["IBLOCK_ID"]), false, array("ID", $arParams["SECTIONS_LIST_PREVIEW_PROPERTY"]));?>
 						<?if ($arSection[$arParams["SECTIONS_LIST_PREVIEW_PROPERTY"]]):?>
-							
-							<tr>
-								<td>	</td>
-								<td>	<br> <!-- <button class = "read_more">Читать далее...</button> -->	</td>
-							</tr>
-
-							<tr class= "tr_desc desc_opened">
-								<td class="desc" <?=($collspan? 'colspan="'.$collspan.'"':"");?>>
-									<span class="desc_wrapp"><?=$arSection[$arParams["SECTIONS_LIST_PREVIEW_PROPERTY"]]?></span>
-								</td>
-							</tr>
+							<tr><td class="desc" <?=($collspan? 'colspan="'.$collspan.'"':"");?>><span class="desc_wrapp"><?=$arSection[$arParams["SECTIONS_LIST_PREVIEW_PROPERTY"]]?></span></td></tr>
 						<?else:?>
-							<tr class= "tr_desc desc_opened">
+							<tr>
 								<td class="desc" <?=($collspan? 'colspan="'.$collspan.'"':"");?>>
 									<span class="desc_wrapp"><?=$arItems["DESCRIPTION"]?></span>
 								</td>
@@ -72,9 +55,3 @@
 	<?}?>
 </div>
 <?}?>
-						<script>
-							$(document).on("click", "read_more", (function(){
-								alert("111");
-								//$(".tr_desc").toggleClass("desc_opened");
-							}));
-						</script>
