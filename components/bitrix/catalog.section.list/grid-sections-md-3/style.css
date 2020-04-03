@@ -1,0 +1,24 @@
+.b-projects .b-projects__cart{
+	height: 258px;
+	background: #f5f5f5;
+	margin-bottom: 15px;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: flex-end;
+	padding: 25px 30px;
+	border-radius:3px;
+}
+.b-projects .row{
+	margin-left: -7.5px;
+	margin-right: -7.5px;
+}
+.b-projects .b-projects__title{
+	font-weight: bold;
+	color: white;
+	font-size: 16px;
+}
+.b-projects .b-projects__col{
+	padding-left: 7.5px;
+	padding-right: 7.5px;
+}
