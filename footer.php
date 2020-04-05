@@ -38,7 +38,6 @@
 			<?CNext::get_banners_position('FOOTER');?>
 		</div><?// .wrapper?>
 		<footer id="footer">
-
 			<?
             global $USER;
             $key = isset($_GET['key']) ? $_GET['key'] : '';
@@ -51,31 +50,31 @@
             }
             if($APPLICATION->GetProperty("viewed_show") == "Y" || $is404):?>
 				<?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	"basket", 
-	array(
-		"COMPONENT_TEMPLATE" => "basket",
-		"PATH" => SITE_DIR."include/footer/comp_viewed.php",
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "",
-		"AREA_FILE_RECURSIVE" => "Y",
-		"EDIT_TEMPLATE" => "standard.php",
-		"PRICE_CODE" => array(
-			0 => "BASE",
-		),
-		"STORES" => array(
-			0 => "",
-			1 => "",
-		),
-		"BIG_DATA_RCM_TYPE" => "any",
-		"STIKERS_PROP" => "HIT",
-		"SALE_STIKER" => "SALE_TEXT",
-		"SHOW_DISCOUNT_PERCENT_NUMBER" => "Y",
-		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO"
-	),
-	false
-);?>					
+					"bitrix:main.include", 
+					"basket", 
+					array(
+						"COMPONENT_TEMPLATE" => "basket",
+						"PATH" => SITE_DIR."include/footer/comp_viewed.php",
+						"AREA_FILE_SHOW" => "file",
+						"AREA_FILE_SUFFIX" => "",
+						"AREA_FILE_RECURSIVE" => "Y",
+						"EDIT_TEMPLATE" => "standard.php",
+						"PRICE_CODE" => array(
+							0 => "BASE",
+						),
+						"STORES" => array(
+							0 => "",
+							1 => "",
+						),
+						"BIG_DATA_RCM_TYPE" => "any",
+						"STIKERS_PROP" => "HIT",
+						"SALE_STIKER" => "SALE_TEXT",
+						"SHOW_DISCOUNT_PERCENT_NUMBER" => "Y",
+						"COMPOSITE_FRAME_MODE" => "A",
+						"COMPOSITE_FRAME_TYPE" => "AUTO"
+					),
+					false
+				);?>					
 			<?endif;?>
             <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/js/jquery.lazy-master/jquery.lazy.min.js"></script>
 			<?CNext::ShowPageType('footer');?>

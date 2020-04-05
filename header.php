@@ -16,21 +16,21 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 	<?$APPLICATION->ShowMeta("apple-mobile-web-app-capable", "yes");?>
 	<?$APPLICATION->ShowMeta("apple-mobile-web-app-status-bar-style");?>
 	<?$APPLICATION->ShowMeta("SKYPE_TOOLBAR");?>
-	<?include 'custom_js_add.php'?>
+	<?include 'custom_js_add.php';?>
 	<?=$APPLICATION->ShowHead();?>
 	<?$APPLICATION->AddHeadString('<script>BX.message('.CUtil::PhpToJSObject( $MESS, false ).')</script>', true);?>
 	<?if($bIncludedModule)
 		CNext::Start(SITE_ID);?>
-<meta name="wot-verification" content="4c56b0b0c6a62c8c42e1"/>
+	<meta name="wot-verification" content="4c56b0b0c6a62c8c42e1"/>
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TJ2WVH4');</script>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TJ2WVH4');
+	</script>
 
-
-<meta name="google-site-verification" content="kZ0NVBESEMnKoLQKCNL2litXLIHZNP3pMZaGW76-IlI" />
+	<meta name="google-site-verification" content="kZ0NVBESEMnKoLQKCNL2litXLIHZNP3pMZaGW76-IlI" />
     <script>
         (function(d) {
             var s = d.createElement('script');
@@ -44,25 +44,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body class="<?=($bIncludedModule ? "fill_bg_".strtolower(CNext::GetFrontParametrValue("SHOW_BG_BLOCK")) : "");?>" id="main">
     <div id="white-curtain">Загрузка...</div>
 	<div id="panel"><?$APPLICATION->ShowPanel();?></div>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ2WVH4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ2WVH4"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
 	<?if(!$bIncludedModule):?>
 		<?$APPLICATION->SetTitle(GetMessage("ERROR_INCLUDE_MODULE_ASPRO_NEXT_TITLE"));?>
-		<center><?$APPLICATION->IncludeFile(SITE_DIR."include/error_include_module.php");?></center></body></html><?die();?>
+		<center><?$APPLICATION->IncludeFile(SITE_DIR."include/error_include_module.php");?></center>
+		</body>
+		</html>
+
+		<?die();?>
 	<?endif;?>
 
 	<?$arTheme = $APPLICATION->IncludeComponent("aspro:theme.next", ".default", array("COMPONENT_TEMPLATE" => ".default"), false, array("HIDE_ICONS" => "Y"));?>
-
-<?
-//if (hasDev()) pr($arTheme);
-?>
+	<?//if (hasDev()) pr($arTheme);?>
     <?include_once('defines.php');?>
 	<?CNext::SetJSOptions();?>
 	<?if($APPLICATION->GetCurPage()=="/"):?>
 	<div class="maxwidth-custom_banner">
     	<div class="custom_banner">
-			<div class="banner_text"><?$APPLICATION->IncludeFile(SITE_DIR."include/banner_text.php");?></div>
-    	</div></div>
+			<div class="banner_text">
+				<?$APPLICATION->IncludeFile(SITE_DIR."include/banner_text.php");?>		
+			</div>
+    	</div>
+    </div>
 	<?endif;?>
 	<div class="wrapper1 <?=($isIndex && $isShowIndexLeftBlock ? "with_left_block" : "");?> <?=CNext::getCurrentPageClass();?> <?=CNext::getCurrentThemeClasses();?>">
 		<?CNext::get_banners_position('TOP_HEADER');?>		
@@ -88,18 +94,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 
 		<?/*filter for contacts*/
-		if($arRegion)
-		{
-			if($arRegion['LIST_STORES'] && !in_array('component', $arRegion['LIST_STORES']))
-			{
-				if($arTheme['STORES_SOURCE']['VALUE'] != 'IBLOCK')
+		if($arRegion){
+			if($arRegion['LIST_STORES'] && !in_array('component', $arRegion['LIST_STORES'])){
+				if($arTheme['STORES_SOURCE']['VALUE'] != 'IBLOCK'){
 					$GLOBALS['arRegionality'] = array('ID' => $arRegion['LIST_STORES']);
-				else
+				}
+				else{
 					$GLOBALS['arRegionality'] = array('PROPERTY_STORE_ID' => $arRegion['LIST_STORES']);
+				}
 			}
 		}
-		if($isIndex)
-		{
+		if($isIndex){
 			$GLOBALS['arrPopularSections'] = array('UF_POPULAR' => 1);
 			$GLOBALS['arrFrontElements'] = array('PROPERTY_SHOW_ON_INDEX_PAGE_VALUE' => 'Y');
 		}?>
