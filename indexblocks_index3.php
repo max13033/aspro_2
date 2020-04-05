@@ -128,7 +128,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 	),
 	false
 );?>
-<?	/*	$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+<?	/*	2020.04.05	$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"PATH" => SITE_DIR."include/mainpage/comp_news_akc.php",
@@ -140,7 +140,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 	false
 );	*/?>
 
-<?	/*	$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+<?	/*	2020.04.05	$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"PATH" => SITE_DIR."include/mainpage/comp_bottom_banners.php",
@@ -179,7 +179,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 		</div>		
 	</div>
 <?endif;?>
-<?	/*	$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+<?	/*	2020.04.05	$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"PATH" => SITE_DIR."include/mainpage/comp_brands.php",
@@ -189,9 +189,8 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
 		"EDIT_TEMPLATE" => "standard.php"
 	),
 	false
-);	*/	?>
-
-<?	/*	$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+);	
+	2020.04.05	$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"PATH" => SITE_DIR."include/mainpage/comp_instagramm.php",
