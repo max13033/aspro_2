@@ -11,16 +11,16 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=LANGUAGE_ID?>" lang="<?=LANGUAGE_ID?>" <?=($htmlClass ? 'class="'.$htmlClass.'"' : '')?>>
 <head>
 	<title><?$APPLICATION->ShowTitle()?></title>
-	<?$APPLICATION->ShowMeta("viewport");?>
-	<?$APPLICATION->ShowMeta("HandheldFriendly");?>
-	<?$APPLICATION->ShowMeta("apple-mobile-web-app-capable", "yes");?>
-	<?$APPLICATION->ShowMeta("apple-mobile-web-app-status-bar-style");?>
-	<?$APPLICATION->ShowMeta("SKYPE_TOOLBAR");?>
-	<?include 'custom_js_add.php';?>
-	<?=$APPLICATION->ShowHead();?>
-	<?$APPLICATION->AddHeadString('<script>BX.message('.CUtil::PhpToJSObject( $MESS, false ).')</script>', true);?>
-	<?if($bIncludedModule)
-		CNext::Start(SITE_ID);?>
+<?	$APPLICATION->ShowMeta("viewport");
+	$APPLICATION->ShowMeta("HandheldFriendly");
+	$APPLICATION->ShowMeta("apple-mobile-web-app-capable", "yes");
+	$APPLICATION->ShowMeta("apple-mobile-web-app-status-bar-style");
+	$APPLICATION->ShowMeta("SKYPE_TOOLBAR");
+	include 'custom_js_add.php';	//	добавляет js и css файлы
+	$APPLICATION->ShowHead();
+	$APPLICATION->AddHeadString('<script>BX.message('.CUtil::PhpToJSObject( $MESS, false ).')</script>', true);
+	if($bIncludedModule)CNext::Start(SITE_ID);
+?>
 	<meta name="wot-verification" content="4c56b0b0c6a62c8c42e1"/>
 
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -57,11 +57,11 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 		<?die();?>
 	<?endif;?>
 
-	<?$arTheme = $APPLICATION->IncludeComponent("aspro:theme.next", ".default", array("COMPONENT_TEMPLATE" => ".default"), false, array("HIDE_ICONS" => "Y"));?>
-	<?//if (hasDev()) pr($arTheme);?>
-    <?include_once('defines.php');?>
-	<?CNext::SetJSOptions();?>
-	<?if($APPLICATION->GetCurPage()=="/"):?>
+	<?$arTheme = $APPLICATION->IncludeComponent("aspro:theme.next", ".default", array("COMPONENT_TEMPLATE" => ".default"), false, array("HIDE_ICONS" => "Y"));
+	//if (hasDev()) pr($arTheme);
+    include_once('defines.php');
+	CNext::SetJSOptions();
+	if($APPLICATION->GetCurPage()=="/"):?>
 	<div class="maxwidth-custom_banner">
     	<div class="custom_banner">
 			<div class="banner_text">
