@@ -86,6 +86,17 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 			</div>
 		<?endif;?>
 
+<!-- search from DIGINETICA -->
+		<script type="text/javascript">
+			var digiScript = document.createElement('script');
+			digiScript.src = '//cdn.diginetica.net/772/client.js?ts=' + Date.now();
+			digiScript.defer = true;
+			digiScript.async = true;
+			document.body.appendChild(digiScript);
+		</script>
+<!-- /search from DIGINETICA -->
+
+
 		<div id="mobileheader" class="visible-xs visible-sm">
 			<?CNext::ShowPageType('header_mobile');?>
 			<div id="mobilemenu" class="<?=($arTheme["HEADER_MOBILE_MENU_OPEN"]["VALUE"] == '1' ? 'leftside':'dropdown')?>">
