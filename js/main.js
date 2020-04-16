@@ -2052,34 +2052,34 @@ CheckTopMenuDotted = function(){
 		})
 
 		/** кастомайзим меню, открываем при наведении а не при ховере */
-		$(function () {
+		// $(function () {
 
-			var timer = null
-			var opened = null
+		// 	var timer = null
+		// 	var opened = null
 
-			$('.menu-item.dropdown.wide_menu.menu-row-not-hover').mouseenter(function(){
-				var $self = $(this)
-				timer = setTimeout(function(){
-					$self.find('.dropdown-menu').addClass('b-main-menu-droped')
-					//console.log('сработал таймер')
-					if (!opened) $('.js-lazyload-top-menu').lazy().show()
-					opened = true
-				}, 700)
-				//console.log('навели на ссылку')
-			})
+		// 	$('.menu-item.dropdown.wide_menu.menu-row-not-hover').mouseenter(function(){
+		// 		var $self = $(this)
+		// 		timer = setTimeout(function(){
+		// 			$self.find('.dropdown-menu').addClass('b-main-menu-droped')
+		// 			//console.log('сработал таймер')
+		// 			if (!opened) $('.js-lazyload-top-menu').lazy().show()
+		// 			opened = true
+		// 		}, 700)
+		// 		//console.log('навели на ссылку')
+		// 	})
 
-			$('.menu-item.dropdown.wide_menu.menu-row-not-hover').mouseleave(function(){
-				$('.menu-item.dropdown.wide_menu.menu-row-not-hover .dropdown-menu').removeClass('b-main-menu-droped')
-				clearTimeout(timer)
-				//console.log('убрали курсор пункта')
-			})
+		// 	$('.menu-item.dropdown.wide_menu.menu-row-not-hover').mouseleave(function(){
+		// 		$('.menu-item.dropdown.wide_menu.menu-row-not-hover .dropdown-menu').removeClass('b-main-menu-droped')
+		// 		clearTimeout(timer)
+		// 		//console.log('убрали курсор пункта')
+		// 	})
 
-			$('.mega-menu.sliced.ovisible .table-menu').mouseleave(function(){
-				$('.menu-item.dropdown.wide_menu.menu-row-not-hover .dropdown-menu').removeClass('b-main-menu-droped')
-				clearTimeout(timer)
-				//console.log('убрали курсор с меню')
-			})
-		})
+		// 	$('.mega-menu.sliced.ovisible .table-menu').mouseleave(function(){
+		// 		$('.menu-item.dropdown.wide_menu.menu-row-not-hover .dropdown-menu').removeClass('b-main-menu-droped')
+		// 		clearTimeout(timer)
+		// 		//console.log('убрали курсор с меню')
+		// 	})
+		// })
 
 	}
 	return false;

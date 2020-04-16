@@ -1,21 +1,27 @@
 /*NOTE: This file is intended for programmers. Aspro technical support is not advised to work with him.*/
+
 /* Examples (uncomment to use):*/
+
 /* Expand site width */
 /* body .wrapper { max-width: 1400px !important;  } */
+
 /* Set site background image */
 /* body {  background: url(image_source) top no-repeat; }
+
 /* Hide compare button */
 /* a.compare_item { display: none !important;  }*/
 
 .top-block .menu.topest {
 	width: 150%;
 }
+
 h1{font-size:1.5em;/*line-height:30px;*/margin:0 0 18px;font-weight:bold;}
 h2{font-size:1.866em;line-height:28px;margin: 40px 0 26px;}
 h3{font-size:1.6em;  line-height:24px;margin: 20px 0 10px;}
 h4{font-size:1.33em; line-height:20px;margin: 40px 0 26px;}
 h5{font-size:1.2em;  line-height:22px;margin: 40px 0 26px;}
 h6{font-size:1.066em;line-height:22px;margin: 40px 0 26px;}
+
 h1{color: #383838;/*font-size: 36px;*/font-weight:bold;/*line-height: 38px;*/padding-bottom: 0px;}
 
 /*breadcrumbs*/
@@ -25,34 +31,43 @@ h1{color: #383838;/*font-size: 36px;*/font-weight:bold;/*line-height: 38px;*/pad
 .breadcrumbs a{text-decoration:none;}
 .breadcrumbs > .separator{position:relative;zoom:1;bottom:0px;display:inline-block;line-height:18px;margin:0 5px;border:0 !important;}
 .breadcrumbs .drop .separator{background: url(images/next.png) -20px -333px no-repeat;opacity:0.5;border:0 none !important;top:11px;display:inline-block;height:3px;line-height:18px;margin:0 4px;position:absolute;width:5px;z-index:1;font-size:0;}
+
 .breadcrumbs .drop  + .separator{margin-left:18px;}
 .breadcrumbs .drop:hover .separator{opacity:1;}
 .breadcrumbs a span, .breadcrumbs span{color:#b6b5b5;font-size:12px;}
+
 
 /* PAGE TITLE & BREADCRUMBS & PAGENAVIGATION */
 section.page-top{padding-top:30px;min-height:56px;position:relative;}
 section.page-top.center{text-align:center;}
 .right_block section.page-top.maxwidth-theme{padding:0px;}
 .title-v1 h1{padding-bottom:3px;}
+
 .title-v2 .page-top.maxwidth-theme,
 .title-v3 .page-top.maxwidth-theme,
 .title-v4 .page-top.maxwidth-theme{background:none;padding-top:30px;padding-bottom: 8px;}
 .title-v3 .page-top.maxwidth-theme,.title-v4 .page-top.maxwidth-theme{padding-top:6px;padding-bottom: 0px;}
+
 .title-v3 .page-top.maxwidth-theme h1, .title-v4 .page-top.maxwidth-theme h1{margin-top:0px;padding-bottom: 5px;}
 section.page-top h1{margin-bottom:0px;}
 section.page-top .line_block + h1{padding-right: 190px;}
 .wrapper_inner.wide_page .page-top{padding-left:30px;padding-right:30px;}
 .page-top .page-top-main{position:relative;}
+
 .with_banners #content > .wrapper_inner{padding-top:30px;}
+
 .title-v4 .breadcrumbs a span, .title-v4 .breadcrumbs span{color:#fff;opacity:0.6}
 .title-v4 .breadcrumbs a:hover span{opacity:1;}
+
 .container .page-top-wrapper{padding:0px 15px;}
 .page-top-wrapper.grey{background: #f9f9f9;}
 .right_block .page-top-wrapper.grey, .right_block .page-top-wrapper.color{margin-bottom: 44px;}
 .page-top-wrapper.color{background: #666;position: relative;}
+
 .page-top-wrapper.color h1{color: #fff;}
 .page-top-wrapper.color .breadcrumb > li, .page-top-wrapper.color .breadcrumb .active, .page-top-wrapper.color .breadcrumb a, .breadcrumb > * { color: #fff; opacity: 0.8; }
 .page-top-wrapper section.page-top{padding-top:32px;}
+
 body .title-v4 .page-top-wrapper.color,
 body.header-v4 .page-top-wrapper.color.v3,
 body.header-v5 .page-top-wrapper.color.v3,
@@ -62,15 +77,22 @@ body.header-v8 .page-top-wrapper.color.v3,
 body.header-v9 .page-top-wrapper.color.v3{margin-top: 0;box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15) inset;}
 body .title-v4.wrapper1  header .header-wrapper > .wrapper_inner{border:none;}
 .regions_padding{padding:0px 15px;}
+
 .top_inner_block_wrapper{padding:0px 0px 30px;}
 .fill_bg_n .top_inner_block_wrapper{max-width:none;}
 .main-adv-banner{margin: 0 auto 30px;overflow: hidden;}
 .main-adv-banner img {width: 100%; height: 100%}
+
+
 a:hover, .link:hover, .header_wrap .top-h-row .menu li > a:hover, .top-h-row .menu li.current > a, .phones .phone_wrap a, .phones .order_wrap_btn:hover, .avtorization-call.enter, .main-nav ul.menu > li > a, ul.mini-menu li a, body .main-nav .menu > li.current > a, .white #header .catalog_menu ul.menu > li a, ul.menu .child li.menu_title a, ul.menu .child li.menu_item a:hover, #header .catalog_menu ul.menu > li > a, #header .catalog_menu ul.menu > li.current > a, .wrapper.has_menu .white #header .catalog_menu ul.menu > li:hover > a, body .white #header ul.menu li .child.submenu .child_wrapp a:hover, body .wrapper.has_menu #header ul.menu li .child.submenu .child_wrapp a:not(.title):hover, ul.menu li .depth3 a.title:hover, #header .wrapper_middle_menu .menu > li .child.submenu .child_wrapp a.current:not(.title), #header .menu > li .child_wrapp a.current:not(.title), body #header ul.menu li .child.submenu.line .child_wrapp > a, .search_middle_block .middle_form .noborder, .basket_wrapp .wraps_icon_block .count a, .basket_wrapp .wraps_icon_block .count .text, .basket_wrapp .basket_block .title, .cost.prices .price, .sale_block .text, .sale_block .value, .news .item .info .date, .stores .stores_list .item a:hover span, .footer_top .sblock .wrap_more_text, .footer_top .sblock .wrap_more_text div, .footer_bottom .submenu_top .menu_item a, .img_block_capcha .reload:hover, .form-control .forgot:hover, .basket_fly .basket_title, .basket_sort ul.tabs li.cur span, .basket_sort ul.tabs li:hover .wrap_li > span, .basket_sort ul.tabs li:hover .wrap_li > span *, .module-cart .name-cell a:hover, .basket_sort ul.tabs li.cur .wrap_li > span, .basket_sort ul.tabs li.cur .wrap_li > span *, .basket_sort ul.tabs li .wrap_li > span *, .section_item_inner .section_info ul li a:hover, .bx_filter .bx_filter_popup_result a, .catalog_item:hover .item-title a, .item-title a:not(.dark-color):hover, li.item:hover a, .item_wrap:hover .item-title a, .view_sale_block .values, .more_text_ajax:hover, .bx_compare .compare_view .item_block:hover a, .item-stock .store_link:hover, .set_block .item:hover .item_info a, .item .date_small, .articles-list.news .item:hover .item-title a, .jobs_wrapp .item .name tr:hover .link, .basket_wrapp .empty_cart:not(.bcart) .wraps_icon_block .count span a, .basket_wrapp .basket_empty .wraps_icon_block.basket .count span, .basket_wrapp .basket_fly .basket_count.empty .wraps_icon_block.basket .count span{color:#1d2029;}
 ul.menu .see_more, ul.menu .see_more a, a.dark_link{color: #000000 !important;}
+
+
 ul.menu li a {
   color: #000;
 }
+
+
 .catalog_detail .detail_text { margin-bottom: 15px;color: #000; }
 .courusel-with-big-img .scale_block_animate a, .courusel-with-big-img .wrap_outer.title a.psevdo-href{
     display: block;
@@ -88,36 +110,56 @@ ul.menu li a {
         margin-top:10px;
     }
 }
+
+
 .contacts.contacts-page-map-overlay {top: 450px;}
+
 /*.title-h1-main {color: #000000; font-size: 2.2vw; font-wieght: bolder !important;}      old    */
+
 .title-h1-main {color: #ffffff; font-size: 18px; font-wieght: bolder;}
+
+
 .sticker_stock {visibility:hidden;}
 .compare_item_button {visibility:hidden !important;}
 .wish_item_button {visibility:hidden !important;}
 .wish_item {visibility:hidden !important;}
 .compare_item {visibility:hidden !important;}
+
 .menu-row > .maxwidth-theme {
     background: none !important;
 }
+
+
 #track .prev.slick-disabled, #track .next.slick-disabled {
     background: #003595 !important;
 }
+
 #track .prev, #track .next {
     background: #003595 !important;
 }
+
 .custom_banner {padding: 0px; height: 35px; }
 /*.banner_text {padding: 10px 0px;}*/
 .maxwidth-custom_banner {background: #003595 !important; max-width: none;}
 .wrapper1 {margin-top: 2px;}
+
+
+
 .filter_opener span {display: inherit !important;}
 .filter_opener:not(.opened) {
     background: #ef7b57;
 }
+
+
 .col-md-7 {width: 55% !important;}
 .col-md-5 {width: 45% !important;}
+
 .sebekon_delivery_price_link {border-bottom: 1px dashed; color: #f55450;}
+
 .stickers .sticker_premium{
+
   background-color: #000000;
 }
+
 .page-top-main h1{font-size: 28px}
 .page-top-main {padding-top:10px}

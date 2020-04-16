@@ -14,20 +14,20 @@ $logoClass = ($arTheme['COLORED_LOGO']['VALUE'] !== 'Y' ? '' : ' colored');
 		<div class="row">
 			<div class="col-md-6">
 				<?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
-		"COMPONENT_TEMPLATE" => ".default",
-		"PATH" => SITE_DIR."include/menu/menu.topest.php",
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "",
-		"AREA_FILE_RECURSIVE" => "Y",
-		"EDIT_TEMPLATE" => "include_area.php",
-		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO"
-	),
-	false
-);?>
+					"bitrix:main.include", 
+					".default", 
+					array(
+						"COMPONENT_TEMPLATE" => ".default",
+						"PATH" => SITE_DIR."include/menu/menu.topest.php",
+						"AREA_FILE_SHOW" => "file",
+						"AREA_FILE_SUFFIX" => "",
+						"AREA_FILE_RECURSIVE" => "Y",
+						"EDIT_TEMPLATE" => "include_area.php",
+						"COMPOSITE_FRAME_MODE" => "A",
+						"COMPOSITE_FRAME_TYPE" => "AUTO"
+					),
+					false
+				);?>
 			</div>
 			<div class="top-block-item pull-right show-fixed top-ctrl">
 				<div class="personal_wrap">

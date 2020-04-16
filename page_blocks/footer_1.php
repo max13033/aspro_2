@@ -74,17 +74,19 @@
 				<div class="col-md-5 col-xs-12">
 					<div class="row">
 						<div class="col-lg-6 col-md-12 col-sm-6">
-							<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
-								array(
-									"COMPONENT_TEMPLATE" => ".default",
-									"PATH" => SITE_DIR."include/left_block/comp_subscribe.php",
-									"AREA_FILE_SHOW" => "file",
-									"AREA_FILE_SUFFIX" => "",
-									"AREA_FILE_RECURSIVE" => "Y",
-									"EDIT_TEMPLATE" => "standard.php"
-								),
-								false
-							);?>
+							<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default", array(
+	"COMPONENT_TEMPLATE" => ".default",
+		"PATH" => SITE_DIR."include/left_block/comp_subscribe.php",
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "",
+		"AREA_FILE_RECURSIVE" => "Y",
+		"EDIT_TEMPLATE" => "standard.php"
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
+);?>
 							<div class="social-block rounded_block">
 								<?$APPLICATION->IncludeComponent("aspro:social.info.next", "top1", Array(
 	"CACHE_TYPE" => "A",	// Тип кеширования

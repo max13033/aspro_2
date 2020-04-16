@@ -38,6 +38,7 @@
 			<?CNext::get_banners_position('FOOTER');?>
 		</div><?// .wrapper?>
 		<footer id="footer">
+
 			<?
             global $USER;
             $key = isset($_GET['key']) ? $_GET['key'] : '';
