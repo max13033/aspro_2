@@ -13,7 +13,7 @@ $iVisibleItemsMenu = ($arTheme['MAX_VISIBLE_ITEMS_MENU']['VALUE'] ? $arTheme['MA
 					$bWideMenu = $arItem["PARAMS"]['FROM_IBLOCK'];?>
 					<td class="menu-item unvisible <?=($arItem["CHILD"] ? "dropdown" : "")?> <?=($bWideMenu ? 'wide_menu menu-row-not-hover' : '');?> <?=(isset($arItem["PARAMS"]["CLASS"]) ? $arItem["PARAMS"]["CLASS"] : "");?>  <?=($arItem["SELECTED"] ? "active" : "")?>">
 						<div class="wrap">
-							<a class="<?=($arItem["CHILD"] && $bShowChilds ? "dropdown-toggle" : "")?>" href="<?=$arItem["LINK"]?>" <?=$arItem["PARAMS"]["target"]?>>
+							<a class="<?=($arItem["CHILD"] && $bShowChilds ? "dropdown-toggle" : "")?>"  <?=$arItem["PARAMS"]["target"]?>>
 								<div>
 									<?=$arItem["TEXT"]?>
 									<div class="line-wrapper"><span class="line"></span></div>
