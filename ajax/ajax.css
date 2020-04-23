@@ -3,6 +3,7 @@ iframe.waitwindowlocal
 	position:absolute; 
 	border:0px; 
 	z-index:9999;
+	
 }
 div.waitwindowlocal 
 {

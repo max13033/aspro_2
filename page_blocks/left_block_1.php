@@ -31,22 +31,21 @@
 	<?CNext::get_banners_position('SIDE', 'Y');?>
 <?endif;?>
 
-<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
-	array(
-		"COMPONENT_TEMPLATE" => ".default",
+<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default", array(
+	"COMPONENT_TEMPLATE" => ".default",
 		"PATH" => SITE_DIR."include/left_block/comp_subscribe.php",
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "",
 		"AREA_FILE_RECURSIVE" => "Y",
 		"EDIT_TEMPLATE" => "include_area.php"
 	),
-	false
-);?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	"front", 
+	false,
 	array(
-		"COMPONENT_TEMPLATE" => "front",
+	"ACTIVE_COMPONENT" => "N"
+	)
+);?>
+<?$APPLICATION->IncludeComponent("bitrix:main.include", "front", array(
+	"COMPONENT_TEMPLATE" => "front",
 		"PATH" => SITE_DIR."include/left_block/comp_news.php",
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "",
@@ -55,16 +54,21 @@
 		"COMPOSITE_FRAME_MODE" => "A",
 		"COMPOSITE_FRAME_TYPE" => "AUTO"
 	),
-	false
-);?>
-<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+	false,
 	array(
-		"COMPONENT_TEMPLATE" => ".default",
+	"ACTIVE_COMPONENT" => "N"
+	)
+);?>
+<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default", array(
+	"COMPONENT_TEMPLATE" => ".default",
 		"PATH" => SITE_DIR."include/left_block/comp_news_articles.php",
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "",
 		"AREA_FILE_RECURSIVE" => "Y",
 		"EDIT_TEMPLATE" => "include_area.php"
 	),
-	false
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
 );?>

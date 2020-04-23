@@ -1,5 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?>
-<?if(isset($GET["debug"])&&$GET["debug"] == "y")
+<?if(isset($GET["debug"]) && $GET["debug"] == "y")
 	error_reporting(E_ERROR | E_PARSE);
 IncludeTemplateLangFile(__FILE__);
 global $APPLICATION, $arRegion, $arSite, $arTheme;
@@ -21,8 +21,10 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 	$APPLICATION->AddHeadString('<script>BX.message('.CUtil::PhpToJSObject( $MESS, false ).')</script>', true);
 	if($bIncludedModule)CNext::Start(SITE_ID);
 ?>
+	<!-- Web Of Trust -->
 	<meta name="wot-verification" content="4c56b0b0c6a62c8c42e1"/>
 
+	<!-- googletagmanager.com -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -31,6 +33,8 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 	</script>
 
 	<meta name="google-site-verification" content="kZ0NVBESEMnKoLQKCNL2litXLIHZNP3pMZaGW76-IlI" />
+    
+	<!-- multisearch.io -->
     <script>
         (function(d) {
             var s = d.createElement('script');
@@ -39,16 +43,18 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
             if (d.head) d.head.appendChild(s);
         })(document);
     </script>
-
 </head>
+
 <body class="<?=($bIncludedModule ? "fill_bg_".strtolower(CNext::GetFrontParametrValue("SHOW_BG_BLOCK")) : "");?>" id="main">
-    <div id="white-curtain">Загрузка...</div>
-	<div id="panel"><?$APPLICATION->ShowPanel();?></div>
+    <div id="white-curtain">Загрузка...</div>		<!-- ??? -->
+	<div id="panel">	<?$APPLICATION->ShowPanel();?>	</div>	<!-- показывает админ панель Битрикса -->
+	
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ2WVH4"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe>
 	</noscript>
-	<?if(!$bIncludedModule):?>
+
+	<?if(!$bIncludedModule):?>	<!-- если не подключился модуль aspro:next - выдавать ошибку -->
 		<?$APPLICATION->SetTitle(GetMessage("ERROR_INCLUDE_MODULE_ASPRO_NEXT_TITLE"));?>
 		<center><?$APPLICATION->IncludeFile(SITE_DIR."include/error_include_module.php");?></center>
 		</body>
@@ -62,7 +68,7 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
     include_once('defines.php');
 	CNext::SetJSOptions();
 	if($APPLICATION->GetCurPage()=="/"):?>
-	<div class="maxwidth-custom_banner">
+	<div class="maxwidth-custom_banner"> 	<!-- текст вверху сайта на синем фоне -->
     	<div class="custom_banner">
 			<div class="banner_text">
 				<?$APPLICATION->IncludeFile(SITE_DIR."include/banner_text.php");?>		
@@ -73,6 +79,7 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 	<div class="wrapper1 <?=($isIndex && $isShowIndexLeftBlock ? "with_left_block" : "");?> <?=CNext::getCurrentPageClass();?> <?=CNext::getCurrentThemeClasses();?>">
 		<?CNext::get_banners_position('TOP_HEADER');?>		
 
+		<!-- Шапка сайта -->
 		<div class="header_wrap visible-lg visible-md title-v<?=$arTheme["PAGE_TITLE"]["VALUE"];?><?=($isIndex ? ' index' : '')?>">
 			<header id="header">
 				<?CNext::ShowPageType('header');?>
@@ -80,12 +87,24 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 		</div>
 		<?CNext::get_banners_position('TOP_UNDERHEADER');?>
 
+		<!-- фиксированная шапка -->
 		<?if($arTheme["TOP_MENU_FIXED"]["VALUE"] == 'Y'):?>
 			<div id="headerfixed">
 				<?CNext::ShowPageType('header_fixed');?>
 			</div>
 		<?endif;?>
 
+<!-- search from DIGINETICA -->
+		<script type="text/javascript">
+			var digiScript = document.createElement('script');
+			digiScript.src = '//cdn.diginetica.net/772/client.js?ts=' + Date.now();
+			digiScript.defer = true;
+			digiScript.async = true;
+			document.body.appendChild(digiScript);
+		</script>
+<!-- /search from DIGINETICA -->
+
+		<!-- мобильное меню -->
 		<div id="mobileheader" class="visible-xs visible-sm">
 			<?CNext::ShowPageType('header_mobile');?>
 			<div id="mobilemenu" class="<?=($arTheme["HEADER_MOBILE_MENU_OPEN"]["VALUE"] == '1' ? 'leftside':'dropdown')?>">
