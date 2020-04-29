@@ -33,18 +33,7 @@ $bIncludedModule = (\Bitrix\Main\Loader::includeModule("aspro.next"));?>
 	</script>
 
 	<meta name="google-site-verification" content="kZ0NVBESEMnKoLQKCNL2litXLIHZNP3pMZaGW76-IlI" />
-    
-	<!-- multisearch.io -->
-    <script>
-        (function(d) {
-            var s = d.createElement('script');
-            s.defer = true;
-            s.src = 'https://multisearch.io/plugin/10685';
-            if (d.head) d.head.appendChild(s);
-        })(document);
-    </script>
-</head>
-
+    </head>
 <body class="<?=($bIncludedModule ? "fill_bg_".strtolower(CNext::GetFrontParametrValue("SHOW_BG_BLOCK")) : "");?>" id="main">
     <div id="white-curtain">Загрузка...</div>		<!-- ??? -->
 	<div id="panel">	<?$APPLICATION->ShowPanel();?>	</div>	<!-- показывает админ панель Битрикса -->

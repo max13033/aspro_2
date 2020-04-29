@@ -5,20 +5,18 @@ global $arTheme;
 $iVisibleItemsMenu = ($arTheme['MAX_VISIBLE_ITEMS_MENU']['VALUE'] ? $arTheme['MAX_VISIBLE_ITEMS_MENU']['VALUE'] : 10);
 ?>
 <?if($arResult):?>
-	<div class="table-menu">
+	<div class="catalog-menu">
 		<table>
 			<tr>
 				<?foreach($arResult as $arItem):?>
 					<?$bShowChilds = $arParams["MAX_LEVEL"] > 1;
 					$bWideMenu = $arItem["PARAMS"]['FROM_IBLOCK'];?>
 					<td class="menu-item unvisible <?=($arItem["CHILD"] ? "dropdown" : "")?> <?=($bWideMenu ? 'wide_menu menu-row-not-hover' : '');?> <?=(isset($arItem["PARAMS"]["CLASS"]) ? $arItem["PARAMS"]["CLASS"] : "");?>  <?=($arItem["SELECTED"] ? "active" : "")?>">
-						<div class="wrap">
-							<a class="<?=($arItem["CHILD"] && $bShowChilds ? "dropdown-toggle" : "")?>"  <?=$arItem["PARAMS"]["target"]?>>
+						<div class="wrap <?=($arItem["CHILD"] && $bShowChilds ? "dropdown-toggle" : "")?>">
 								<div>
-									<?=$arItem["TEXT"]?>
+									<?=$arItem["TEXT"]?>	<!-- текст пункта меню -->
 									<div class="line-wrapper"><span class="line"></span></div>
 								</div>
-							</a>
 							<?if($arItem["CHILD"] && $bShowChilds):?>
 								<span class="tail"></span>
 								<ul class="dropdown-menu">
